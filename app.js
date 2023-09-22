@@ -3,10 +3,6 @@ import pets from "./petList.js";
 const app = express();
 const PORT = 8000;
 
-app.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}`);
-});
-
 // index route
 app.get("/", (req, res) => {
   res.render("index.ejs", {
@@ -42,4 +38,8 @@ app.get("/animals/:pet_type/:pet_id", (req, res) => {
       type: req.params.pet_type,
     });
   }
+});
+
+app.listen(PORT, () => {
+  console.log(`Listening on port ${PORT}`);
 });

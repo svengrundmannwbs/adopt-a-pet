@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      a {
+        text-transform: capitalize;
+      }
+    </style>
+    <title><%= myTitle %></title>
+  </head>
+  <body>
+    <% if (myTitle) { %>
+    <h1><%= myTitle %></h1>
+    <% } %>
+    <p>Browse through the links below to find your new furry friend:</p>
+    <ul>
+      <% for (const item in content) { %>
+      <li><a href="/animals/<%= item %>"><%= item %></a></li>
+      <% }%>
+    </ul>
+  </body>
+</html>

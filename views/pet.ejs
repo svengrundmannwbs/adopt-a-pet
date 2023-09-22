@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile: <%= pet.name%></title>
+  </head>
+  <body>
+    <h1><%= pet.name %></h1>
+    <img src="<%= pet.url %>" />
+    <p><%= pet.description%></p>
+    <ul>
+      <li><%= pet.breed %></li>
+      <li><%= pet.age %></li>
+    </ul>
+    <a href="./">Back to <%= type %>-index</a>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adpot a pet: <%= myTitle %></title>
+    <style>
+      span,
+      a {
+        text-transform: capitalize;
+      }
+    </style>
+  </head>
+  <body>
+    <% if (myTitle && myTitle!=="ERROR") { %>
+    <h1>List of <span><%= myTitle %></span></h1>
+    <ul>
+      <% content.forEach((item,id) => {%>
+      <li><a href="/animals/<%= myTitle %>/<%= id %>"><%= item.name %></a></li>
+      <% })%>
+    </ul>
+    <% } else { %>
+    <h1><%= myTitle %></h1>
+    <p><%= content[0] %></p>
+    <% } %>
+    <a href="/">Back to index</a>
+  </body>
+</html>
